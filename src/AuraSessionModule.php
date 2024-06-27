@@ -28,10 +28,10 @@ class AuraSessionModule extends AbstractModule
     {
         $this->bind(Session::class)->toConstructor(Session::class, [
             'cookies' => Cookie::class,
-            'delete_cookie' => DeleteCookie::class
+            'delete_cookie' => DeleteCookie::class,
         ]);
         $this->bind()->annotatedWith(Cookie::class)->toProvider(CookieProvider::class);
-        $this->bind()->annotatedWith(DeleteCookie::class)->toInstance(null);
+        $this->bind()->annotatedWith(DeleteCookie::class)->toInstance([new DeleteCookieInvoker(), '__invoke']);
         $this->bind(SegmentFactory::class);
         $this->bind(CsrfTokenFactory::class);
         $this->bind(RandvalInterface::class)->to(Randval::class);
