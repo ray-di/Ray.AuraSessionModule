@@ -13,6 +13,7 @@ use PHPUnit\Framework\TestCase;
 use Ray\Di\Injector;
 
 use function serialize;
+use function unserialize;
 
 class AuraSessionModuleTest extends TestCase
 {
