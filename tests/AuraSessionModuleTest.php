@@ -30,4 +30,13 @@ class AuraSessionModuleTest extends TestCase
         $serialized = serialize($session);
         $this->assertIsString($serialized);
     }
+
+    public function testDeserialize(): void
+    {
+        $injector = new Injector(new AuraSessionModule());
+        $session = $injector->getInstance(Session::class);
+        $serialized = serialize($session);
+        $deserialized = unserialize($serialized);
+        $this->assertInstanceOf(Session::class, $deserialized);
+    }
 }
