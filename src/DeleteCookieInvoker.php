@@ -13,7 +13,11 @@ use function time;
 
 final class DeleteCookieInvoker
 {
-    /** @param array{path: string, domain: string} $params */
+    /**
+     * Delete a cookie by setting its expiration time to a past value
+     *
+     * @param array{path: string, domain: string} $params
+     */
     public function __invoke(string $name, array $params): void
     {
         setcookie(
