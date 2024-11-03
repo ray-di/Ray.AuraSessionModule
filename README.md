@@ -52,7 +52,3 @@ class Index extends ResourceObject
 
 ```
 
-See more about Aura.Session.
-
- * http://auraphp.com/framework/2.x/en/session/ (En)
- * http://auraphp.com/framework/2.x/ja/session/ (Ja)
