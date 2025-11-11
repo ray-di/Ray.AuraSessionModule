@@ -14,9 +14,6 @@ trait AuraSessionInject
     /** @var Session */
     protected $session;
 
-    /**
-     * @\Ray\Di\Di\Inject
-     */
     public function setSession(Session $session)
     {
         $this->session = $session;

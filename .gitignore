@@ -11,3 +11,5 @@ build
 vendor/
 composer.phar
 composer.lock
+.phpunit.cache
+.phpunit.result.cache
