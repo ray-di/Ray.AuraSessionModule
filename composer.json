@@ -6,7 +6,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "ray/di": "^2.5.3",
+        "ray/di": "^2.14",
         "aura/session": "^2.1",
         "ircmaxell/random-lib": "^1.1"
     },
