@@ -25,7 +25,7 @@ final class DeleteCookieInvoker
             '',
             time() - 42000,
             $params['path'],
-            $params['domain']
+            $params['domain'],
         );
     }
 }
