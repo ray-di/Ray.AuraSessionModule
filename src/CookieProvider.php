@@ -13,9 +13,10 @@ use Ray\Di\ProviderInterface;
 class CookieProvider implements ProviderInterface
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      *
      * @SuppressWarnings(PHPMD.Superglobals)
+     * @psalm-taint-source input
      */
     public function get()
     {

@@ -22,7 +22,7 @@ use Ray\Di\Scope;
 class AuraSessionModule extends AbstractModule
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     protected function configure()
     {
