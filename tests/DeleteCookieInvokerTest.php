@@ -56,7 +56,7 @@ class DeleteCookieInvokerTest extends TestCase
         $this->assertCount(1, $setCookieCalls);
         $this->assertSame('test_cookie', $setCookieCalls[0]['name']);
         $this->assertSame('', $setCookieCalls[0]['value']);
-        $this->assertSame(1000000 - 42000, $setCookieCalls[0]['expires']);
+        $this->assertSame(1000000 - DeleteCookieInvoker::EXPIRE_OFFSET, $setCookieCalls[0]['expires']);
         $this->assertSame('/app', $setCookieCalls[0]['path']);
         $this->assertSame('example.com', $setCookieCalls[0]['domain']);
     }
