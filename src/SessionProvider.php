@@ -8,10 +8,15 @@ declare(strict_types=1);
 
 namespace Ray\AuraSessionModule;
 
+use Aura\Session\Session;
 use Aura\Session\SessionFactory;
+use Override;
 use Ray\Di\ProviderInterface;
 
-/** @deprecated */
+/**
+ * @deprecated
+ * @implements ProviderInterface<Session>
+ */
 class SessionProvider implements ProviderInterface
 {
     /**
@@ -20,6 +25,7 @@ class SessionProvider implements ProviderInterface
      * @SuppressWarnings(PHPMD.Superglobals)
      * @psalm-taint-source input
      */
+    #[Override]
     public function get()
     {
         return (new SessionFactory())->newInstance($_COOKIE);

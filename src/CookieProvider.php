@@ -8,8 +8,10 @@ declare(strict_types=1);
 
 namespace Ray\AuraSessionModule;
 
+use Override;
 use Ray\Di\ProviderInterface;
 
+/** @implements ProviderInterface<array<array-key, string>> */
 class CookieProvider implements ProviderInterface
 {
     /**
@@ -18,6 +20,7 @@ class CookieProvider implements ProviderInterface
      * @SuppressWarnings(PHPMD.Superglobals)
      * @psalm-taint-source input
      */
+    #[Override]
     public function get()
     {
         return $_COOKIE;
