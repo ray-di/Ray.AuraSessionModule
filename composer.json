@@ -7,7 +7,7 @@
     "require": {
         "php": "^8.0",
         "ray/di": "^2.14",
-        "aura/session": "^4.0",
+        "aura/session": "^4.0 || ^6.0 || ^7.0",
         "ircmaxell/random-lib": "^1.1"
     },
     "require-dev": {
