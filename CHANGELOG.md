@@ -9,7 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [1.4.0] - 2026-11-22
 
 ### Changed
-- Allow `aura/session` ^6.0 and ^7.0 alongside ^4.0. `aura/session` 7.0 requires PHP 8.4 or later; Composer keeps resolving an older release on lower PHP versions.
+- Allow `aura/session` ^6.0 and ^7.0 alongside ^4.0. `aura/session` 6.0 requires PHP 8.1 or later and 7.0 requires PHP 8.4 or later; Composer resolves the newest release the PHP version allows.
 
 ### Added
 - PHP 8.5 and 8.6 in the CI matrix.
