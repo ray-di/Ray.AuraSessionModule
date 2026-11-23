@@ -11,7 +11,7 @@ namespace Ray\AuraSessionModule;
 use Override;
 use Ray\Di\ProviderInterface;
 
-/** @implements ProviderInterface<array<array-key, string>> */
+/** @implements ProviderInterface<array<array-key, string|array<array-key, mixed>>> */
 class CookieProvider implements ProviderInterface
 {
     /**
