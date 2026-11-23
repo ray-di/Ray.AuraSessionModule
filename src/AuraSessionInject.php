@@ -6,15 +6,13 @@ namespace Ray\AuraSessionModule;
 
 use Aura\Session\Session;
 
-/**
- * @deprecated Use PHP 8.0: Class constructor property promotion instead
- */
+/** @deprecated Use PHP 8.0: Class constructor property promotion instead */
 trait AuraSessionInject
 {
     /** @var Session */
     protected $session;
 
-    public function setSession(Session $session)
+    public function setSession(Session $session): void
     {
         $this->session = $session;
     }

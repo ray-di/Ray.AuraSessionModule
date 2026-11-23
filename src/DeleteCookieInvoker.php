@@ -8,11 +8,10 @@ declare(strict_types=1);
 
 namespace Ray\AuraSessionModule;
 
-use function setcookie;
-use function time;
-
 final class DeleteCookieInvoker
 {
+    public const EXPIRE_OFFSET = 42000;
+
     /**
      * Delete a cookie by setting its expiration time to a past value
      *
@@ -23,9 +22,9 @@ final class DeleteCookieInvoker
         setcookie(
             $name,
             '',
-            time() - 42000,
+            time() - self::EXPIRE_OFFSET,
             $params['path'],
-            $params['domain']
+            $params['domain'],
         );
     }
 }

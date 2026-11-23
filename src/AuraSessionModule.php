@@ -14,6 +14,7 @@ use Aura\Session\Randval;
 use Aura\Session\RandvalInterface;
 use Aura\Session\SegmentFactory;
 use Aura\Session\Session;
+use Override;
 use Ray\AuraSessionModule\Annotation\Cookie;
 use Ray\AuraSessionModule\Annotation\DeleteCookie;
 use Ray\Di\AbstractModule;
@@ -22,8 +23,9 @@ use Ray\Di\Scope;
 class AuraSessionModule extends AbstractModule
 {
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
+    #[Override]
     protected function configure()
     {
         $this->bind(Session::class)->toConstructor(Session::class, [
