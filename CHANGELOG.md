@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Psalm `@psalm-taint-source input` annotations on `CookieProvider` and `SessionProvider`, so Psalm taint analysis treats the injected cookie values as user input.
+
+### Changed
+- `CookieProvider` declares its provided type as `array<array-key, string|array<array-key, mixed>>`, allowing nested cookie values.
+- `Cookie` and `DeleteCookie` declare `#[Attribute]` and `#[Qualifier]` as separate attributes.
+- `AuraSessionInject::setSession()` declares a `void` return type. A subclass of a class using the trait that overrides `setSession()` must now declare `: void`.
+
+### Removed
+- The package no longer requires `ircmaxell/random-lib`, which it did not use. Users who rely on it must require it themselves.
+
 ## [1.4.0] - 2026-11-22
 
 ### Changed
