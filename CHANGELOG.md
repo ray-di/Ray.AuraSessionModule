@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-11-24
+
 ### Added
 - Psalm `@psalm-taint-source input` annotations on `CookieProvider` and `SessionProvider`, so Psalm taint analysis treats the injected cookie values as user input.
 
@@ -51,7 +53,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [1.0.0] - 2015-09-06
 - Initial release.
 
-[Unreleased]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.4.0...HEAD
+[Unreleased]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.5.0...HEAD
+[1.5.0]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.2.2...1.3.0
 [1.2.2]: https://github.com/ray-di/Ray.AuraSessionModule/compare/1.2.1...1.2.2
